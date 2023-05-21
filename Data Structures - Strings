@@ -1,0 +1,79 @@
+## To realize how long the string it is and what split do you want it, it's possible to use a built-in function such as len to discover it
+fruit = 'banana'
+print(len(fruit))
+>> 6
+
+x = len(fruit)
+print(x)
+>> 6
+
+## To find out the letters and their positions in the string, it's possible to create a looping through strings 
+fruit = 'banana'
+index = 0
+while index < len(fruit):
+    letter = fruit[index]
+    print(index, letter)
+    index = index + 1
+ 
+>> 0 b
+>> 1 a
+>> 2 n
+>> 3 a
+>> 4 n
+>> 5 a
+
+## Or in a more simple code, it's possible to looping through strings in such way:
+
+fruit = 'banana'
+for letter in fruit:
+    print(letter)
+>> b
+>> a
+>> n
+>> a
+>> n
+>> a
+
+# Looping and Counting
+# This is a simple loop that loops through each letter in a string and counts the number of times the loop encounters the 'a' character
+
+word = 'banana'
+count = 0
+for letter in word:
+    if letter == 'a' :
+        count = count + 1
+print(count)
+
+>> 3
+
+# Slicing Strings
+# M(0)o(1)n(2)t(3)y(4) (5)P(6)y(7)t(8)h(9)o(10)n(11)
+# We can also look atany continuos section of a string using a colon operator
+# The second number is one beyond the end of the slice - 'up to but not incluing'
+# If the second number is beyond the end of the string, it stops at the end
+
+s = 'Monty Python'
+
+# Go to 0 until 4, but don't include 4
+print(s[0:4])
+>> Mont
+
+# Go to 6 until 7, but don't include 4
+print(s[6:7])
+>> P
+
+# Go 6 until 20, but don't include 4. Which is a perfect way to get until the end without get a error.
+print(s[6:20])
+>> Python
+
+# Go to 0 until 2, but don't include 2
+print(s[:2])
+>> Mo
+
+# Go to 8 until the end
+print(s[8:])
+>> thon
+
+# Get all the string and print it.
+print(s[:])
+>> Monty Python
